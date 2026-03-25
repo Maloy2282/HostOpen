@@ -29,13 +29,13 @@ else:
     exit()
 
 ftp = FTP()
-ftp.connect('ftp.hostgta.com', 2344)
+ftp.connect('FTP IP', PORT)
 
-ftp.login(user="user5235123", passwd="Matvey2282")
+ftp.login(user="FTP USER", passwd="FTP PASSWORD")
 ftp.set_pasv(True)
 local_filename = 'index.html'
 
-ftp.cwd('whg105476.hgweb.ru')
+ftp.cwd('Ur folder of files')
 
 with open("index.html", 'rb') as file_data:
     ftp.storbinary('STOR ' + local_filename, file_data)
@@ -45,7 +45,7 @@ ftp.quit()
 n4 = input("Успешно залито на сайт! Открыть его? Y/N: ")
 
 if n4 == "Y":
-    os.system("start http://whg105476.hgweb.ru")
+    os.system("start Ur ip adress")
 
 else:
     exit()
